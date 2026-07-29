@@ -5,13 +5,13 @@ import { useCases } from '../data/content';
 <section id="usecases" class="relative py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="reveal mx-auto max-w-2xl text-center">
-      <span class="text-xs font-semibold uppercase tracking-widest text-coral-400">Casos de uso</span>
-      <h2 class="mt-3 font-display text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-        ¿Qué puedes construir?
+      <span class="text-xs font-semibold uppercase tracking-widest text-coral-400" data-i18n-es="Casos de uso">Use Cases</span>
+      <h2 class="mt-3 font-display text-4xl font-extrabold tracking-tight text-white sm:text-5xl" data-i18n-es="¿Qué puedes construir?">
+        What can you build?
       </h2>
-      <p class="mt-4 text-lg text-slate-400">
-        Desde scraping hasta agentes IA autónomos. El ecosistema Wave cubre todo el espectro
-        de automatización de navegador.
+      <p class="mt-4 text-lg text-slate-400" data-i18n-es="Desde scraping hasta agentes IA autónomos. El ecosistema Wave cubre todo el espectro de automatización de navegador.">
+        From scraping to autonomous AI agents. The Wave ecosystem covers the entire spectrum
+        of browser automation.
       </p>
     </div>
 
@@ -24,8 +24,8 @@ import { useCases } from '../data/content';
           <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-coral-500/10 border border-coral-500/15 text-xl">
             {uc.icon}
           </div>
-          <h3 class="mt-4 font-display text-lg font-bold text-white">{uc.title}</h3>
-          <p class="mt-2 text-sm leading-relaxed text-slate-400">{uc.description}</p>
+          <h3 class="mt-4 font-display text-lg font-bold text-white" data-i18n-es={uc.title.es}>{uc.title.en}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400" data-i18n-es={uc.description.es}>{uc.description.en}</p>
           <div class="mt-4 flex flex-wrap gap-2">
             {uc.tools.map((tool) => (
               <span class="rounded-md bg-abyss-800/60 px-2.5 py-1 font-mono text-xs text-wave-400 border border-slate-800">

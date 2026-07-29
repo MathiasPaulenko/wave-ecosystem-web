@@ -40,23 +40,22 @@ const base = import.meta.env.BASE_URL;
         <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-foam-400 opacity-75"></span>
         <span class="relative inline-flex h-2 w-2 rounded-full bg-foam-400"></span>
       </span>
-      4 herramientas · 1 ecosistema · 100% Python · sin Node.js
+      <span data-i18n-es="4 herramientas · 1 ecosistema · 100% Python · sin Node.js">4 tools · 1 ecosystem · 100% Python · no Node.js</span>
     </div>
 
     <!-- Title -->
     <h1 class="animate-float-up max-w-5xl font-display text-5xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl" style="animation-delay: 0.1s;">
-      El ecosistema
-      <span class="text-gradient-wave">Wave</span>
+      The <span class="text-gradient-wave">Wave</span> ecosystem
       <br class="hidden sm:block" />
-      para automatización
+      for browser
       <br class="hidden sm:block" />
-      de navegador
+      automation
     </h1>
 
     <!-- Subtitle -->
-    <p class="animate-float-up mt-8 max-w-2xl text-lg text-slate-400 sm:text-xl" style="animation-delay: 0.2s;">
-      De CDP a WebDriver BiDi, de la CLI al control desde LLMs.
-      Sin Node.js, sin descargas de Chromium. Solo Python y tu navegador.
+    <p class="animate-float-up mt-8 max-w-2xl text-lg text-slate-400 sm:text-xl" style="animation-delay: 0.2s;" data-i18n-es="De CDP a WebDriver BiDi, de la CLI al control desde LLMs. Sin Node.js, sin descargas de Chromium. Solo Python y tu navegador.">
+      From CDP to WebDriver BiDi, from CLI to LLM control.
+      No Node.js, no Chromium downloads. Just Python and your browser.
     </p>
 
     <!-- CTAs -->
@@ -66,7 +65,7 @@ const base = import.meta.env.BASE_URL;
         class="group relative inline-flex items-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-wave-500 to-foam-400 px-7 py-3.5 text-sm font-semibold text-abyss-950 transition-transform hover:scale-105"
       >
         <span class="absolute inset-0 bg-gradient-to-r from-foam-400 to-wave-500 opacity-0 transition-opacity group-hover:opacity-100"></span>
-        <span class="relative">Explorar herramientas</span>
+        <span class="relative" data-i18n-es="Explorar herramientas">Explore tools</span>
         <svg class="relative h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
         </svg>
@@ -79,13 +78,13 @@ const base = import.meta.env.BASE_URL;
           <path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z" />
           <path stroke-linecap="round" stroke-linejoin="round" d="M8 5V3m8 2V3" />
         </svg>
-        Ver arquitectura
+        <span data-i18n-es="Ver arquitectura">View architecture</span>
       </a>
     </div>
 
     <!-- Quick install -->
     <div class="animate-float-up mt-12 flex flex-col items-center gap-3" style="animation-delay: 0.4s;">
-      <span class="text-xs font-medium uppercase tracking-widest text-slate-500">Instalación rápida</span>
+      <span class="text-xs font-medium uppercase tracking-widest text-slate-500" data-i18n-es="Instalación rápida">Quick install</span>
       <div class="group flex items-center gap-3 rounded-xl border border-slate-800 bg-abyss-900/80 px-5 py-3 font-mono text-sm text-slate-300 backdrop-blur-sm transition-colors hover:border-wave-500/20">
         <span class="text-foam-400">$</span>
         <span>pip install <span class="text-wave-400">wavexis</span></span>
@@ -100,14 +99,14 @@ const base = import.meta.env.BASE_URL;
     <!-- Stats -->
     <div class="animate-float-up mt-16 grid grid-cols-2 gap-8 sm:grid-cols-4" style="animation-delay: 0.5s;">
       {[
-        { value: '4', label: 'Herramientas' },
-        { value: '220', label: 'MCP tools' },
-        { value: '743', label: 'Métodos CLI' },
-        { value: 'W3C', label: 'Estándar abierto' },
+        { value: '4', label: 'Tools', labelEs: 'Herramientas' },
+        { value: '220', label: 'MCP tools', labelEs: 'MCP tools' },
+        { value: '743', label: 'CLI methods', labelEs: 'Métodos CLI' },
+        { value: 'W3C', label: 'Open standard', labelEs: 'Estándar abierto' },
       ].map((stat) => (
         <div class="text-center">
           <div class="font-display text-3xl font-bold text-white sm:text-4xl">{stat.value}</div>
-          <div class="mt-1 text-xs font-medium uppercase tracking-wider text-slate-500">{stat.label}</div>
+          <div class="mt-1 text-xs font-medium uppercase tracking-wider text-slate-500" data-i18n-es={stat.labelEs}>{stat.label}</div>
         </div>
       ))}
     </div>

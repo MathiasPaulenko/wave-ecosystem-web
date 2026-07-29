@@ -8,14 +8,14 @@ interface Props {
 
 const {
   title = 'Wave Ecosystem — Browser Automation for Python',
-  description = 'Un ecosistema unificado de herramientas Python para automatización de navegador: CDP, WebDriver BiDi, framework de testing, MCP para LLMs y CLI.',
+  description = 'A unified ecosystem of Python tools for browser automation: CDP, WebDriver BiDi, testing framework, MCP for LLMs and CLI.',
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
-<html lang="es" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -58,4 +58,38 @@ const base = import.meta.env.BASE_URL;
   );
 
   document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+  // i18n language switching
+  function applyLang(lang: string) {
+    document.documentElement.lang = lang;
+    localStorage.setItem('wave-lang', lang);
+
+    document.querySelectorAll('[data-i18n-es]').forEach((el) => {
+      const elem = el as HTMLElement;
+      if (lang === 'es') {
+        if (!elem.dataset.i18nEn) elem.dataset.i18nEn = elem.textContent ?? '';
+        elem.textContent = elem.dataset.i18nEs ?? '';
+      } else {
+        if (elem.dataset.i18nEn) elem.textContent = elem.dataset.i18nEn;
+      }
+    });
+
+    // Update toggle button labels
+    document.querySelectorAll('[data-lang-current]').forEach((el) => {
+      (el as HTMLElement).textContent = lang === 'en' ? 'EN' : 'ES';
+    });
+    document.querySelectorAll('[data-lang-other]').forEach((el) => {
+      (el as HTMLElement).textContent = lang === 'en' ? 'ES' : 'EN';
+    });
+  }
+
+  // Apply saved language on load
+  const savedLang = localStorage.getItem('wave-lang') || 'en';
+  applyLang(savedLang);
+
+  // Listen for toggle events
+  window.addEventListener('i18n-toggle', () => {
+    const current = document.documentElement.lang;
+    applyLang(current === 'en' ? 'es' : 'en');
+  });
 </script>
