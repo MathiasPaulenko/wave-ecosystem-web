@@ -50,11 +50,25 @@ const repos = [
     <div class="grid grid-cols-2 gap-8 sm:grid-cols-4">
       <div class="col-span-2 sm:col-span-1">
         <a href="#" class="flex items-center gap-2.5">
-          <svg class="h-7 w-7" viewBox="0 0 64 64" fill="none">
-            <path d="M8 40 Q16 30 24 40 T40 40 T56 40" stroke="#22d3ee" stroke-width="3" stroke-linecap="round" fill="none" />
-            <path d="M8 46 Q16 36 24 46 T40 46 T56 46" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6" />
-            <circle cx="32" cy="20" r="6" fill="#22d3ee" />
-            <circle cx="32" cy="20" r="3" fill="#050d1c" />
+          <svg class="h-7 w-7" viewBox="0 0 256 256" fill="none">
+            <defs>
+              <linearGradient id="footer-logo-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#22d3ee"/>
+                <stop offset="100%" stop-color="#0e7490"/>
+              </linearGradient>
+            </defs>
+            <rect x="8" y="8" width="240" height="240" rx="56" ry="56" fill="url(#footer-logo-bg)"/>
+            <path d="M 56 100 Q 88 60 120 100 T 184 100 T 200 100" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
+            <path d="M 56 128 Q 88 88 120 128 T 184 128 T 200 128" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/>
+            <g transform="translate(128, 186)" opacity="0.9">
+              <line x1="-40" y1="0" x2="-14" y2="0" stroke="#FFFFFF" stroke-width="3" opacity="0.5"/>
+              <line x1="-6" y1="0" x2="6" y2="0" stroke="#FFFFFF" stroke-width="3" opacity="0.5"/>
+              <line x1="14" y1="0" x2="40" y2="0" stroke="#FFFFFF" stroke-width="3" opacity="0.5"/>
+              <circle cx="-40" cy="0" r="8" fill="#FFFFFF"/>
+              <circle cx="-13" cy="0" r="8" fill="#FFFFFF"/>
+              <circle cx="13" cy="0" r="8" fill="#FFFFFF"/>
+              <circle cx="40" cy="0" r="8" fill="#FFFFFF"/>
+            </g>
           </svg>
           <span class="font-display text-base font-extrabold text-white">wave<span class="text-wave-400">.</span></span>
         </a>
