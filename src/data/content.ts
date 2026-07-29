@@ -24,7 +24,7 @@ export const tools: Tool[] = [
     docs: 'https://mathiaspaulenko.github.io/cdpwave/',
     status: 'published',
     install: 'pip install cdpwave',
-    icon: '⚡',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48"><defs><linearGradient id="cdp-bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2196F3"/><stop offset="100%" stop-color="#0D47A1"/></linearGradient></defs><rect x="32" y="32" width="448" height="448" rx="96" ry="96" fill="url(#cdp-bg)"/><path d="M 112 240 Q 176 180 240 240 T 368 240 T 400 240" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" opacity="0.35"/><path d="M 112 290 Q 176 230 240 290 T 368 290 T 400 290" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/><path d="M 196 370 L 168 386 L 196 402" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/><path d="M 316 370 L 344 386 L 316 402" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/><line x1="296" y1="362" x2="216" y2="410" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" opacity="0.5"/></svg>',
     accent: 'wave',
     features: ['60 dominios CDP', '689 métodos tipados', 'WebSocket directo', 'mypy --strict', 'Async-first', 'Detección de navegador'],
     stats: [
@@ -43,7 +43,7 @@ export const tools: Tool[] = [
     docs: 'https://mathiaspaulenko.github.io/bidiwave/',
     status: 'published',
     install: 'pip install bidiwave',
-    icon: '🌊',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48"><defs><linearGradient id="bidi-bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#3F51B5"/><stop offset="100%" stop-color="#1A237E"/></linearGradient></defs><rect x="32" y="32" width="448" height="448" rx="96" ry="96" fill="url(#bidi-bg)"/><path d="M 112 240 Q 176 180 240 240 T 368 240 T 400 240" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" opacity="0.35"/><path d="M 112 290 Q 176 230 240 290 T 368 290 T 400 290" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/><line x1="196" y1="386" x2="316" y2="386" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" opacity="0.85"/><path d="M 208 374 L 194 386 L 208 398" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/><path d="M 304 374 L 318 386 L 304 398" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/></svg>',
     accent: 'foam',
     features: ['W3C WD 2025-07-28', 'Chrome + Firefox + Edge', '27 tipos de eventos', 'Pydantic v2', 'CDP bridge', 'Reconexión auto'],
     stats: [
@@ -62,7 +62,7 @@ export const tools: Tool[] = [
     docs: 'https://mathiaspaulenko.github.io/wavexis/',
     status: 'published',
     install: 'pip install wavexis[cdp]',
-    icon: '🎯',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48"><defs><linearGradient id="wxs-bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#3F51B5"/><stop offset="100%" stop-color="#1A237E"/></linearGradient></defs><rect x="32" y="32" width="448" height="448" rx="96" ry="96" fill="url(#wxs-bg)"/><path d="M 112 256 Q 176 196 240 256 T 368 256 T 400 256" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" opacity="0.4"/><path d="M 112 320 Q 176 260 240 320 T 368 320 T 400 320" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/></svg>',
     accent: 'coral',
     features: ['130+ comandos CLI', 'REPL interactivo', 'Serve mode HTTP', 'Stealth anti-bot', 'CI assertions', 'Record & replay'],
     stats: [
@@ -81,7 +81,7 @@ export const tools: Tool[] = [
     docs: 'https://mathiaspaulenko.github.io/wavexis-mcp/',
     status: 'published',
     install: 'uvx wavexis-mcp',
-    icon: '🤖',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48"><defs><linearGradient id="mcp-bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#3F51B5"/><stop offset="100%" stop-color="#1A237E"/></linearGradient></defs><rect x="32" y="32" width="448" height="448" rx="96" ry="96" fill="url(#mcp-bg)"/><path d="M 112 240 Q 176 180 240 240 T 368 240 T 400 240" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" opacity="0.4"/><path d="M 112 300 Q 176 240 240 300 T 368 300 T 400 300" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/><circle cx="160" cy="380" r="14" fill="#FFFFFF" opacity="0.9"/><circle cx="256" cy="380" r="14" fill="#FFFFFF" opacity="0.9"/><circle cx="352" cy="380" r="14" fill="#FFFFFF" opacity="0.9"/><line x1="174" y1="380" x2="242" y2="380" stroke="#FFFFFF" stroke-width="4" opacity="0.5"/><line x1="270" y1="380" x2="338" y2="380" stroke="#FFFFFF" stroke-width="4" opacity="0.5"/></svg>',
     accent: 'wave',
     features: ['220 MCP tools', '13 capability tiers', 'Chrome + Firefox', 'Stealth mode', 'Errores con suggestion', 'wavexis_act (NL)'],
     stats: [

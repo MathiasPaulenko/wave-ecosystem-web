@@ -33,8 +33,8 @@ const accentMap = {
           >
             <!-- Top row: icon + status -->
             <div class="flex items-start justify-between">
-              <div class={`flex h-12 w-12 items-center justify-center rounded-xl ${a.bg} ${a.border} border text-2xl`}>
-                {tool.icon}
+              <div class="h-12 w-12 shrink-0 overflow-hidden rounded-xl transition-transform group-hover:scale-110">
+                <Fragment set:html={tool.icon} />
               </div>
               <span class="inline-flex items-center gap-1.5 rounded-full bg-foam-400/10 px-3 py-1 text-xs font-medium text-foam-400">
                 <span class="h-1.5 w-1.5 rounded-full bg-foam-400"></span>
