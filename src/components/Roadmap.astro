@@ -1,0 +1,55 @@
+---
+import { roadmap } from '../data/content';
+
+const statusConfig = {
+  done: { label: 'Completado', color: 'text-foam-400', bg: 'bg-foam-400', border: 'border-foam-400/30', icon: '✓' },
+  active: { label: 'En progreso', color: 'text-wave-400', bg: 'bg-wave-500', border: 'border-wave-500/30', icon: '◐' },
+  planned: { label: 'Planificado', color: 'text-slate-500', bg: 'bg-slate-600', border: 'border-slate-700', icon: '○' },
+};
+---
+
+<section id="roadmap" class="relative py-24 sm:py-32">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <span class="text-xs font-semibold uppercase tracking-widest text-amber-glow">Roadmap</span>
+      <h2 class="mt-3 font-display text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
+        Hacia dónde vamos
+      </h2>
+      <p class="mt-4 text-lg text-slate-400">
+        La evolución del ecosistema Wave, fase por fase.
+      </p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="reveal mt-16 space-y-0">
+      {roadmap.map((item, i) => {
+        const s = statusConfig[item.status];
+        const isLast = i === roadmap.length - 1;
+        return (
+          <div class="relative flex gap-6 pb-12">
+            <!-- Line + dot -->
+            {!isLast && (
+              <div class="absolute left-[15px] top-8 bottom-0 w-px bg-gradient-to-b from-slate-700 to-slate-800"></div>
+            )}
+            <div class={`relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 ${s.border} bg-abyss-900`}>
+              <span class={`text-sm ${s.color}`}>{s.icon}</span>
+            </div>
+
+            <!-- Content -->
+            <div class={`flex-1 rounded-xl border ${s.border} bg-abyss-900/40 p-5 backdrop-blur-sm transition-colors hover:bg-abyss-800/40`}>
+              <div class="flex flex-wrap items-center gap-3">
+                <span class="font-mono text-xs font-medium text-slate-500">{item.phase}</span>
+                <span class={`inline-flex items-center gap-1.5 rounded-full ${s.border} border px-2.5 py-0.5 text-xs font-medium ${s.color}`}>
+                  <span class={`h-1.5 w-1.5 rounded-full ${s.bg}`}></span>
+                  {s.label}
+                </span>
+              </div>
+              <h3 class="mt-2 font-display text-lg font-bold text-white">{item.title}</h3>
+              <p class="mt-1.5 text-sm leading-relaxed text-slate-400">{item.description}</p>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>

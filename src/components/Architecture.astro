@@ -1,0 +1,80 @@
+---
+---
+
+<section id="architecture" class="relative py-24 sm:py-32">
+  <div class="absolute inset-0 grid-pattern opacity-20"></div>
+
+  <div class="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <span class="text-xs font-semibold uppercase tracking-widest text-wave-400">Arquitectura</span>
+      <h2 class="mt-3 font-display text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
+        Cómo se relacionan las herramientas
+      </h2>
+      <p class="mt-4 text-lg text-slate-400">
+        Capas de abstracción que se construyen unas sobre otras. Usa la capa que necesites.
+      </p>
+    </div>
+
+    <!-- Diagram -->
+    <div class="reveal mt-16 flex flex-col items-center">
+      <div class="w-full max-w-3xl rounded-2xl border border-slate-800 bg-abyss-900/40 p-6 sm:p-10 backdrop-blur-sm">
+        <svg viewBox="0 0 600 420" class="w-full h-auto" fill="none">
+          <!-- Connection lines -->
+          <!-- cdpwave -> wavexis -->
+          <path d="M150 280 L150 200 L270 200 L270 160" stroke="#22d3ee" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.4" style="animation: dash-flow 20s linear infinite;" />
+          <!-- bidiwave -> wavexis -->
+          <path d="M450 280 L450 200 L330 200 L330 160" stroke="#34d399" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.4" style="animation: dash-flow 20s linear infinite;" />
+          <!-- wavexis -> wavexis-mcp -->
+          <path d="M300 120 L300 80" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.4" style="animation: dash-flow 20s linear infinite;" />
+          <!-- Layer: MCP (top) -->
+          <g>
+            <rect x="210" y="40" width="180" height="50" rx="12" fill="rgba(251, 113, 133, 0.08)" stroke="#fb7185" stroke-width="1.5" />
+            <text x="300" y="62" text-anchor="middle" fill="#fb7185" font-family="Unbounded, sans-serif" font-size="14" font-weight="700">wavexis-mcp</text>
+            <text x="300" y="78" text-anchor="middle" fill="#94a3b8" font-family="DM Sans, sans-serif" font-size="10">MCP Server · 220 LLM Tools</text>
+          </g>
+
+          <!-- Layer: CLI (middle) -->
+          <g>
+            <rect x="210" y="120" width="180" height="50" rx="12" fill="rgba(251, 113, 133, 0.08)" stroke="#fb7185" stroke-width="1.5" />
+            <text x="300" y="142" text-anchor="middle" fill="#fb7185" font-family="Unbounded, sans-serif" font-size="14" font-weight="700">wavexis</text>
+            <text x="300" y="158" text-anchor="middle" fill="#94a3b8" font-family="DM Sans, sans-serif" font-size="10">CLI · REPL · HTTP Server</text>
+          </g>
+
+          <!-- Layer: Libraries (bottom) -->
+          <g>
+            <rect x="60" y="260" width="180" height="50" rx="12" fill="rgba(34, 211, 238, 0.08)" stroke="#22d3ee" stroke-width="1.5" />
+            <text x="150" y="282" text-anchor="middle" fill="#22d3ee" font-family="Unbounded, sans-serif" font-size="14" font-weight="700">cdpwave</text>
+            <text x="150" y="298" text-anchor="middle" fill="#94a3b8" font-family="DM Sans, sans-serif" font-size="10">Chrome DevTools Protocol</text>
+          </g>
+
+          <g>
+            <rect x="360" y="260" width="180" height="50" rx="12" fill="rgba(52, 211, 153, 0.08)" stroke="#34d399" stroke-width="1.5" />
+            <text x="450" y="282" text-anchor="middle" fill="#34d399" font-family="Unbounded, sans-serif" font-size="14" font-weight="700">bidiwave</text>
+            <text x="450" y="298" text-anchor="middle" fill="#94a3b8" font-family="DM Sans, sans-serif" font-size="10">WebDriver BiDi · W3C</text>
+          </g>
+
+          <!-- Layer labels (left side) -->
+          <text x="20" y="65" fill="#475569" font-family="JetBrains Mono, monospace" font-size="9" font-weight="500">LLM</text>
+          <text x="20" y="145" fill="#475569" font-family="JetBrains Mono, monospace" font-size="9" font-weight="500">CLI</text>
+          <text x="20" y="285" fill="#475569" font-family="JetBrains Mono, monospace" font-size="9" font-weight="500">LIBS</text>
+        </svg>
+      </div>
+
+      <!-- Legend -->
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-500">
+        <div class="flex items-center gap-2">
+          <div class="h-2 w-8 rounded-full bg-wave-500"></div>
+          <span>CDP / cdpwave</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="h-2 w-8 rounded-full bg-foam-400"></div>
+          <span>BiDi / bidiwave</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="h-2 w-8 rounded-full bg-coral-400"></div>
+          <span>wavexis / wavexis-mcp</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
