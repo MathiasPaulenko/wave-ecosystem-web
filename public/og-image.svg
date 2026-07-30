@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050d1c"/>
+      <stop offset="100%" stop-color="#0a1a3a"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Grid pattern -->
+  <g opacity="0.05">
+    <line x1="0" y1="210" x2="1200" y2="210" stroke="#22d3ee" stroke-width="1"/>
+    <line x1="0" y1="420" x2="1200" y2="420" stroke="#22d3ee" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="630" stroke="#22d3ee" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="630" stroke="#22d3ee" stroke-width="1"/>
+    <line x1="900" y1="0" x2="900" y2="630" stroke="#22d3ee" stroke-width="1"/>
+  </g>
+  <!-- Wave icon -->
+  <g transform="translate(80, 80)">
+    <rect x="0" y="0" width="80" height="80" rx="20" fill="rgba(34,211,238,0.1)" stroke="#22d3ee" stroke-width="2"/>
+    <path d="M 15 45 Q 30 30 45 45 T 65 45" fill="none" stroke="#22d3ee" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 15 55 Q 30 40 45 55 T 65 55" fill="none" stroke="#34d399" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <!-- Title -->
+  <text x="80" y="280" font-family="Arial, sans-serif" font-size="56" font-weight="900" fill="#ffffff">Wave Ecosystem</text>
+  <text x="80" y="340" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#94a3b8">Python Browser Automation</text>
+  <!-- Subtitle with gradient -->
+  <text x="80" y="400" font-family="Arial, sans-serif" font-size="24" font-weight="600" fill="url(#wave)">CDP · WebDriver BiDi · CLI · MCP</text>
+  <!-- Stats -->
+  <g transform="translate(80, 460)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#22d3ee">4 Tools</text>
+    <text x="140" y="0" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#34d399">220 MCP Tools</text>
+    <text x="340" y="0" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#fb7185">743 CLI Methods</text>
+    <text x="560" y="0" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#fbbf24">20 AI Resources</text>
+  </g>
+  <!-- No Node.js badge -->
+  <rect x="80" y="510" width="280" height="40" rx="20" fill="rgba(52,211,153,0.1)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="220" y="536" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#34d399">No Node.js · No Chromium downloads</text>
+</svg>

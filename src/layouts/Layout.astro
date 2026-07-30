@@ -7,11 +7,97 @@ interface Props {
 }
 
 const {
-  title = 'Wave Ecosystem — Browser Automation for Python',
-  description = 'A unified ecosystem of Python tools for browser automation: CDP, WebDriver BiDi, testing framework, MCP for LLMs and CLI.',
+  title = 'Wave Ecosystem — Python Browser Automation | CDP, BiDi, CLI & MCP',
+  description = 'Unified Python browser automation ecosystem: cdpwave (60 CDP domains), bidiwave (W3C WebDriver BiDi), wavexis CLI (130+ commands) and wavexis-mcp (220 MCP tools for LLMs). No Node.js, no Chromium downloads.',
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL;
+const siteUrl = 'https://mathiaspaulenko.github.io/wave-ecosystem-web';
+const canonicalURL = new URL(Astro.url.pathname, siteUrl).href;
+const ogImage = `${siteUrl}/og-image.svg`;
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Wave Ecosystem',
+    url: siteUrl,
+    logo: `${siteUrl}/favicon.svg`,
+    sameAs: [
+      'https://github.com/MathiasPaulenko/cdpwave',
+      'https://github.com/MathiasPaulenko/bidiwave',
+      'https://github.com/MathiasPaulenko/wavexis',
+      'https://github.com/MathiasPaulenko/wavexis-mcp',
+      'https://github.com/MathiasPaulenko/ai-toolkit',
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Wave Ecosystem',
+    applicationCategory: 'DeveloperApplication',
+    operatingSystem: 'Cross-platform',
+    description: 'Unified Python browser automation ecosystem with CDP, WebDriver BiDi, CLI and MCP tools for LLMs.',
+    url: siteUrl,
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+    featureList: [
+      'cdpwave — 60 CDP domains, 689 typed methods, async-first',
+      'bidiwave — W3C WebDriver BiDi, Chrome + Firefox + Edge',
+      'wavexis — 130+ CLI commands, REPL, HTTP serve mode, stealth',
+      'wavexis-mcp — 220 MCP tools for LLMs, 13 capability tiers',
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is the Wave Ecosystem?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The Wave Ecosystem is a suite of Python tools for browser automation: cdpwave (Chrome DevTools Protocol), bidiwave (W3C WebDriver BiDi), wavexis (CLI) and wavexis-mcp (MCP server for LLMs). No Node.js or Chromium downloads required.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Does Wave Ecosystem require Node.js?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'No. All Wave Ecosystem tools are pure Python. No Node.js, no ChromeDriver, no Chromium downloads. Just pip install and use your existing browser.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What browsers are supported?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'cdpwave supports Chrome, Edge and Brave via CDP. bidiwave supports Chrome, Firefox and Edge via W3C WebDriver BiDi. wavexis-mcp supports Chrome and Firefox.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is wavexis-mcp?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'wavexis-mcp is an MCP server that exposes 220 browser automation tools to LLMs in 13 capability tiers. It enables AI agents to navigate websites, fill forms, click elements and extract data autonomously.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Are there AI resources for Claude, Cursor or Windsurf?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. The ai-toolkit repository includes 13 skills, 3 agents, 1 coding ruleset and 3 workflows pre-built for Claude, Cursor and Windsurf to automate browser testing, scraping, debugging and CI/CD tasks.',
+        },
+      },
+    ],
+  },
+];
 ---
 
 <!doctype html>
@@ -22,10 +108,37 @@ const base = import.meta.env.BASE_URL;
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
 
+    <!-- Primary SEO -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="python browser automation, cdp, chrome devtools protocol, webdriver bidi, w3c, mcp server, llm tools, web scraping, browser testing, cdpwave, bidiwave, wavexis, wavexis-mcp, ai toolkit" />
+    <meta name="robots" content="index, follow, max-snippet:200, max-image-preview:large, max-video-preview:-1" />
+    <meta name="author" content="Mathias Paulenko" />
+    <meta name="theme-color" content="#050d1c" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href={canonicalURL} />
+    <link rel="alternate" hreflang="es" href={canonicalURL} />
+    <link rel="alternate" hreflang="x-default" href={canonicalURL} />
+
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="Wave Ecosystem" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content="Wave Ecosystem — Python Browser Automation" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="es_ES" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content="Wave Ecosystem — Python Browser Automation" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,12 +148,17 @@ const base = import.meta.env.BASE_URL;
       rel="stylesheet"
     />
 
-    <title>{title}</title>
-    <meta name="description" content={description} />
+    <!-- Structured data -->
+    {jsonLd.map((data) => (
+      <script type="application/ld+json" set:html={JSON.stringify(data)} />
+    ))}
   </head>
   <body class="bg-abyss-950 text-slate-200 antialiased">
-    <div class="noise-overlay"></div>
+    <div class="noise-overlay" aria-hidden="true"></div>
     <slot />
+    <noscript>
+      <p style="position:absolute;left:-9999px;">Wave Ecosystem — Python browser automation tools: cdpwave, bidiwave, wavexis and wavexis-mcp. CDP, WebDriver BiDi, CLI and MCP for LLMs. No Node.js required.</p>
+    </noscript>
   </body>
 </html>
 
