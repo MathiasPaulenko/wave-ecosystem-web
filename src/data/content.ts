@@ -299,3 +299,88 @@ export const roadmap: RoadmapItem[] = [
     status: 'planned',
   },
 ];
+
+export interface AIResource {
+  name: string;
+  url: string;
+}
+
+export interface AIResourceGroup {
+  id: string;
+  title: L;
+  description: L;
+  icon: string;
+  accent: 'wave' | 'foam' | 'coral';
+  resources: AIResource[];
+}
+
+export const aiResources: AIResourceGroup[] = [
+  {
+    id: 'skills',
+    title: { en: 'Skills', es: 'Skills' },
+    description: {
+      en: 'Reusable AI skills for Claude, Cursor and Windsurf. Cover testing, scraping, debugging, performance, accessibility, CI/CD and more.',
+      es: 'Skills reutilizables para Claude, Cursor y Windsurf. Cubren testing, scraping, debugging, performance, accesibilidad, CI/CD y más.',
+    },
+    icon: '⚡',
+    accent: 'wave',
+    resources: [
+      { name: 'wave-ecosystem-guide', url: 'https://github.com/MathiasPaulenko/ai-toolkit/tree/main/skills/wave-ecosystem-guide' },
+      { name: 'wavexis-cli-automation', url: 'https://github.com/MathiasPaulenko/ai-toolkit/tree/main/skills/wavexis-cli-automation' },
+      { name: 'wavexis-mcp-agent-integration', url: 'https://github.com/MathiasPaulenko/ai-toolkit/tree/main/skills/wavexis-mcp-agent-integration' },
+      { name: 'cdpwave-testing', url: 'https://github.com/MathiasPaulenko/ai-toolkit/tree/main/skills/cdpwave-testing' },
+      { name: 'bidiwave-cross-browser', url: 'https://github.com/MathiasPaulenko/ai-toolkit/tree/main/skills/bidiwave-cross-browser' },
+      { name: 'wavexis-web-scraping', url: 'https://github.com/MathiasPaulenko/ai-toolkit/tree/main/skills/wavexis-web-scraping' },
+      { name: 'wavexis-performance-audit', url: 'https://github.com/MathiasPaulenko/ai-toolkit/tree/main/skills/wavexis-performance-audit' },
+      { name: 'wavexis-accessibility', url: 'https://github.com/MathiasPaulenko/ai-toolkit/tree/main/skills/wavexis-accessibility' },
+      { name: 'wavexis-ci-cd', url: 'https://github.com/MathiasPaulenko/ai-toolkit/tree/main/skills/wavexis-ci-cd' },
+      { name: 'wavexis-network-testing', url: 'https://github.com/MathiasPaulenko/ai-toolkit/tree/main/skills/wavexis-network-testing' },
+      { name: 'wavexis-session-recording', url: 'https://github.com/MathiasPaulenko/ai-toolkit/tree/main/skills/wavexis-session-recording' },
+      { name: 'cdpwave-debugging', url: 'https://github.com/MathiasPaulenko/ai-toolkit/tree/main/skills/cdpwave-debugging' },
+      { name: 'bidiwave-network-interception', url: 'https://github.com/MathiasPaulenko/ai-toolkit/tree/main/skills/bidiwave-network-interception' },
+    ],
+  },
+  {
+    id: 'agents',
+    title: { en: 'Agents', es: 'Agentes' },
+    description: {
+      en: 'Pre-configured AI agents for autonomous browser automation, test architecture and MCP orchestration.',
+      es: 'Agentes IA pre-configurados para automatización autónoma de navegador, arquitectura de tests y orquestación MCP.',
+    },
+    icon: '🤖',
+    accent: 'foam',
+    resources: [
+      { name: 'wave-automation-engineer', url: 'https://github.com/MathiasPaulenko/ai-toolkit/tree/main/agents/wave-automation-engineer' },
+      { name: 'wave-test-architect', url: 'https://github.com/MathiasPaulenko/ai-toolkit/tree/main/agents/wave-test-architect' },
+      { name: 'wave-mcp-orchestrator', url: 'https://github.com/MathiasPaulenko/ai-toolkit/tree/main/agents/wave-mcp-orchestrator' },
+    ],
+  },
+  {
+    id: 'rules',
+    title: { en: 'Rules', es: 'Reglas' },
+    description: {
+      en: 'Coding rules and conventions for Wave ecosystem projects. Enforce best practices across teams and AI agents.',
+      es: 'Reglas de código y convenciones para proyectos del ecosistema Wave. Aplica best practices en equipos y agentes IA.',
+    },
+    icon: '📐',
+    accent: 'coral',
+    resources: [
+      { name: 'wave-ecosystem-rules', url: 'https://github.com/MathiasPaulenko/ai-toolkit/blob/main/rules/coding/wave-ecosystem-rules.md' },
+    ],
+  },
+  {
+    id: 'workflows',
+    title: { en: 'Workflows', es: 'Workflows' },
+    description: {
+      en: 'Pre-built workflows for cross-browser testing, CI visual regression and MCP setup. Ready to use in Windsurf.',
+      es: 'Workflows pre-construidos para testing cross-browser, CI visual regression y setup de MCP. Listos para usar en Windsurf.',
+    },
+    icon: '🔄',
+    accent: 'wave',
+    resources: [
+      { name: 'wave-cross-browser-test', url: 'https://github.com/MathiasPaulenko/ai-toolkit/blob/main/workflows/wave-cross-browser-test.md' },
+      { name: 'wave-ci-visual-regression', url: 'https://github.com/MathiasPaulenko/ai-toolkit/blob/main/workflows/wave-ci-visual-regression.md' },
+      { name: 'wave-mcp-setup', url: 'https://github.com/MathiasPaulenko/ai-toolkit/blob/main/workflows/wave-mcp-setup.md' },
+    ],
+  },
+];
